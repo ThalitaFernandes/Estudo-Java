@@ -1,0 +1,11 @@
+//Elabore um programa em Java que calcule a média de um aluno para a matéria de matemática. O aluno deve informar seu nome e as quatro notas da matéria.
+public class Media {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Cálculo da média em matemática");
+		
+
+	}
+
+}

@@ -1,0 +1,32 @@
+//Construa uma classe Java que peça o Nome, Endereço, Sexo, Cidade, Estado, Idade dos funcionários. Além disto, dado o Salário Bruto do funcionário, calcule o seu Salário Líquido. 
+//Considere que os descontos podem ser o Vale Transporte (2%), Vale Alimentação (5%) e Plano de Saúde (10%).
+
+package Salario;
+
+import javax.swing.JOptionPane;
+
+public class SalarioLiquido {
+
+	public static void main(String[] args) {
+		String nome, end, sexo, cidade, estado;
+		int idade;
+		double salarioBruto, salarioLiquido;
+		double transporte, alimentacao, saude;
+		
+		nome = JOptionPane.showInputDialog("informe o nome do funcionário: ");
+		end = JOptionPane.showInputDialog("informe o endereço do funcionário: ");
+		sexo = JOptionPane.showInputDialog("informe o sexo do funcionário: ");
+		cidade = JOptionPane.showInputDialog("informe a cidade do funcionário: ");
+		estado = JOptionPane.showInputDialog("informe o estado do funcionário: ");
+		salarioBruto = Double.parseDouble(JOptionPane.showInputDialog("informe o salário bruto do funcionário: "));
+		
+		transporte = salarioBruto*0.02;
+		alimentacao = salarioBruto*0.05;
+		saude = salarioBruto*0.1;
+		salarioLiquido = salarioBruto-(transporte+alimentacao+saude);
+		
+		JOptionPane.showMessageDialog(null, "Olá " + nome + ". Seu salário  líquido é  R$ " + salarioLiquido);
+
+	}
+
+}

@@ -1,0 +1,29 @@
+//Elabore um programa em Java que calcule a média de um aluno para a matéria de matemática. O aluno deve informar seu nome e as quatro notas da matéria.
+
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+public class Media {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		
+		String nome;
+		float notas[] = new float[4];
+		int i;
+		float soma = 0;
+		float media;
+		
+		JOptionPane.showMessageDialog(null, "Cálculo da média em matemática");
+		nome = JOptionPane.showInputDialog("informe o nome do aluno: ");
+		for(i = 0; i < 4; i++) {
+			notas[i] = Integer.parseInt(JOptionPane.showInputDialog("Nota: ", i));
+			soma+=notas[i];
+		}
+		media = soma/4;
+		JOptionPane.showMessageDialog(null, "A média do(a) é "+media);
+
+
+	}
+
+}
